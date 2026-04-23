@@ -13,7 +13,7 @@ pi install npm:@aotarola/pi-exit
 ### From git
 
 ```bash
-pi install git:https://github.com/aotarola/pi-exit
+pi install git:github.com/aotarola/pi-exit
 ```
 
 ## Try without installing
@@ -27,7 +27,7 @@ pi -e npm:@aotarola/pi-exit
 ### From git
 
 ```bash
-pi -e git:https://github.com/aotarola/pi-exit
+pi -e git:github.com/aotarola/pi-exit
 ```
 
 ### From a local checkout
