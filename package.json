@@ -1,8 +1,12 @@
 {
   "name": "@aotarola/pi-exit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "pi package that adds /exit as an alias for /quit",
-  "keywords": ["pi-package", "pi", "extension"],
+  "keywords": [
+    "pi-package",
+    "pi",
+    "extension"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,7 +24,9 @@
     "access": "public"
   },
   "pi": {
-    "extensions": ["./extensions"]
+    "extensions": [
+      "./extensions"
+    ]
   },
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": "*"
