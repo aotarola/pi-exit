@@ -57,8 +57,14 @@ Publishing is handled by GitHub Actions when a version tag is pushed.
 
 One-time setup:
 
-1. Create an npm automation token or publish token for `@aotarola/pi-exit`.
-2. Add it to this GitHub repository as the secret `NPM_TOKEN`.
+1. In npm, open the package settings for `@aotarola/pi-exit`.
+2. Configure a trusted publisher for GitHub Actions:
+   - Organization/user: `aotarola`
+   - Repository: `pi-exit`
+   - Workflow filename: `release.yml`
+   - Environment: leave blank unless the workflow is later changed to use a GitHub environment
+
+No npm token is required; GitHub Actions authenticates with npm using OIDC trusted publishing.
 
 Release a patch version:
 

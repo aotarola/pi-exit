@@ -31,7 +31,9 @@ The package should keep its existing `pi` manifest and peer dependency on `@mari
 
 ## Authentication
 
-The workflow should support npm publishing from GitHub Actions using `NODE_AUTH_TOKEN` sourced from the GitHub secret `NPM_TOKEN`. The repository owner must add an npm automation token or publish token as `NPM_TOKEN` in GitHub repository secrets.
+The workflow should use npm trusted publishing with GitHub Actions OIDC instead of long-lived npm tokens. The publish job needs `id-token: write` permission, and `npm publish` should run without `NODE_AUTH_TOKEN` or `NPM_TOKEN`.
+
+The repository owner must configure npm trusted publishing for package `@aotarola/pi-exit` with GitHub Actions provider, repository owner `aotarola`, repository name `pi-exit`, and workflow filename `release.yml`.
 
 ## Testing and validation
 
